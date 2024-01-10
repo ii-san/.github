@@ -1,0 +1,50 @@
+name: Feature Story
+description: Capture a user story for this project
+title: "[Feature]: "
+labels:
+  - "feature"
+  - "triage"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please fill out this feature request with as mush detail as possible
+  - type: dropdown
+    attributes:
+      label: Type of story
+      description: Select the type of story
+      multiple: true
+      options:
+        - "Feature"
+        - "Documentation"
+        - "Style"
+        - "Refactor"
+        - "Test"
+        - "Build"
+        - "CI"
+        - "Chore"
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Story Summary
+      description: Please include a brief description of the work that will be delivered in this story.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: User Scenario
+      description: Please describe the desired experience for the user.
+      placeholder: As an X user, I can Y, to accomplish Z...
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Acceptance Criteria
+      description: Please include any specific testing requirements and/or test plans that will be applied to this story.
+      placeholder: Given X, When Y, Then Z
+  - type: input
+    id: context
+    attributes:
+      label: Additional Context
+      description: Add any other context about the problem or helpful links here.
